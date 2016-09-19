@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mybatiscrud:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="mybatiscrud.war">
+      <element id="artifact" artifact-name="mybatiscrud:war exploded" />
+    </root>
+  </artifact>
+</component>
