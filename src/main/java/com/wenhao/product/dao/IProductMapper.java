@@ -1,6 +1,7 @@
 package com.wenhao.product.dao;
 
 import com.wenhao.product.domain.Product;
+import com.wenhao.product.query.ProductQuery;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface IProductMapper {
     Product get(Long id);
 
     List<Product> getAll();
+
+    Product getAlls(ProductQuery query);
 }

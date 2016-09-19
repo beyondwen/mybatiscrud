@@ -5,7 +5,7 @@ package com.wenhao.product.domain;
  */
 public class Product {
     private Long id;
-    private String productname;
+    private String name;
     private String producttype;
 
     public Long getId() {
@@ -16,12 +16,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getProductname() {
-        return productname;
+    public String getName() {
+        return name;
     }
 
-    public void setProductname(String productname) {
-        this.productname = productname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getProducttype() {
@@ -32,11 +32,15 @@ public class Product {
         this.producttype = producttype;
     }
 
+    public String getWenHao() {
+        return " where id = 10 ";
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", productname='" + productname + '\'' +
+                ", name='" + name + '\'' +
                 ", producttype='" + producttype + '\'' +
                 '}';
     }

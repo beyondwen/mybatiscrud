@@ -2,6 +2,7 @@ package com.wenhao.product.dao.impl;
 
 import com.wenhao.product.dao.IProductMapper;
 import com.wenhao.product.domain.Product;
+import com.wenhao.product.query.ProductQuery;
 import com.wenhao.product.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -36,5 +37,10 @@ public class ProductMapperImpl implements IProductMapper {
     public List<Product> getAll() {
         List<Product> list = sqlSession.selectList("com.wenhao.product.dao.IProductMapper.getAll");
         return list;
+    }
+
+    public Product getAlls(ProductQuery query) {
+        Product product = sqlSession.selectOne("com.wenhao.product.dao.IProductMapper.getAlls", query);
+        return product;
     }
 }
